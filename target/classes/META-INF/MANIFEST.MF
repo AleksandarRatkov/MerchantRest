@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Vendor: Pivotal Software, Inc.
+Implementation-Title: AcquirerRestService
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: net.javabeat
+Build-Jdk: 1.7.0_91
+Built-By: codecentric
+Created-By: Maven Integration for Eclipse
+Main-Class: app.Application
+
