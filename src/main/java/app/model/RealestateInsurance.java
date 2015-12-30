@@ -2,69 +2,75 @@ package app.model;
 
 public class RealestateInsurance {
 
-	//real estate insurance -- "re"
-		private int reDuration;
-		private double reSize;
-		private double reAge;
-		private double reEstimatedVal;
-		private int realEstatePackId; //foreign key
+	// real estate insurance -- "re"
+	private int duration;
+	private double size;
+	private double age;
+	private double estimatedValue;
+	private String owner; // name + surname
+	private String packageRE;
 
-		
-		
-		public RealestateInsurance() {
-			super();
-		}
+	public RealestateInsurance() {
+		super();
+	}
 
-		public RealestateInsurance(int reDuration, double reSize, double reAge, double reEstimatedVal,
-				int realEstatePackId) {
-			super();
-			this.reDuration = reDuration;
-			this.reSize = reSize;
-			this.reAge = reAge;
-			this.reEstimatedVal = reEstimatedVal;
-			this.realEstatePackId = realEstatePackId;
-		}
+	public RealestateInsurance(int duration, double size, double age, double estimatedValue, String owner,
+			String packageRE) {
+		super();
+		this.duration = duration;
+		this.size = size;
+		this.age = age;
+		this.estimatedValue = estimatedValue;
+		this.owner = owner;
+		this.packageRE = packageRE;
+	}
 
-		public int getReDuration() {
-			return reDuration;
-		}
+	public int getDuration() {
+		return duration;
+	}
 
-		public void setReDuration(int reDuration) {
-			this.reDuration = reDuration;
-		}
+	public void setDuration(int duration) {
+		this.duration = duration;
+	}
 
-		public double getReSize() {
-			return reSize;
-		}
+	public double getSize() {
+		return size;
+	}
 
-		public void setReSize(double reSize) {
-			this.reSize = reSize;
-		}
+	public void setSize(double size) {
+		this.size = size;
+	}
 
-		public double getReAge() {
-			return reAge;
-		}
+	public double getAge() {
+		return age;
+	}
 
-		public void setReAge(double reAge) {
-			this.reAge = reAge;
-		}
+	public void setAge(double age) {
+		this.age = age;
+	}
 
-		public double getReEstimatedVal() {
-			return reEstimatedVal;
-		}
+	public double getEstimatedValue() {
+		return estimatedValue;
+	}
 
-		public void setReEstimatedVal(double reEstimatedVal) {
-			this.reEstimatedVal = reEstimatedVal;
-		}
+	public void setEstimatedValue(double estimatedValue) {
+		this.estimatedValue = estimatedValue;
+	}
 
-		public int getRealEstatePackId() {
-			return realEstatePackId;
-		}
+	public String getOwner() {
+		return owner;
+	}
 
-		public void setRealEstatePackId(int realEstatePackId) {
-			this.realEstatePackId = realEstatePackId;
-		}
-		
-		
+	public void setOwner(String owner) {
+		this.owner = owner;
+	}
+
+	public String getPackageRE() {
+		return packageRE;
+	}
+
+	public void setPackageRE(String packageRE) {
+		this.packageRE = packageRE;
+	}
 
 }

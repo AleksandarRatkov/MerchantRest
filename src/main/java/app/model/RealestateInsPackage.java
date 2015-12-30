@@ -9,14 +9,26 @@ public class RealestateInsPackage {
 	@Id
 	private int id;
 	private String name;
+	private int coefficient;
 	
 	public RealestateInsPackage() {
 		super();
 	}
 	
-	public RealestateInsPackage(String name) {
+	public RealestateInsPackage(String name, int coefficient) {
 		super();
 		this.name = name;
+		this.coefficient = coefficient;
+	}
+
+	
+	
+	public int getCoefficient() {
+		return coefficient;
+	}
+
+	public void setCoefficient(int coefficient) {
+		this.coefficient = coefficient;
 	}
 
 	public int getId() {

@@ -1,63 +1,52 @@
 package app.model;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
-
-@Document
 public class User {
 
-	@Id
-	private String id;
-	private String firstName;
-	private String lastName;
-	private String email;
+	private String name;
+	private String surname;
+	private String jmbg;
 	private String phoneNum;
 	private String address;
-	
-		
+	private String passportNum;
+
 	public User() {
 		super();
 	}
+	
+	
 
-	public User(String firstName, String lastName, String email, String phoneNum, String address) {
+	public User(String name, String surname, String jmbg, String phoneNum, String address, String passportNum) {
 		super();
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.email = email;
+		this.name = name;
+		this.surname = surname;
+		this.jmbg = jmbg;
 		this.phoneNum = phoneNum;
 		this.address = address;
+		this.passportNum = passportNum;
 	}
 
-	public String getFirstName() {
-		return firstName;
+	public String getName() {
+		return name;
 	}
 
-	public String getId() {
-		return id;
+	public void setName(String name) {
+		this.name = name;
 	}
 
-	public void setId(String id) {
-		this.id = id;
+	public String getSurname() {
+		return surname;
 	}
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+	public void setSurname(String surname) {
+		this.surname = surname;
 	}
 
-	public String getLastName() {
-		return lastName;
+	public String getJmbg() {
+		return jmbg;
 	}
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
+	public void setJmbg(String jmbg) {
+		this.jmbg = jmbg;
 	}
 
 	public String getPhoneNum() {
@@ -76,14 +65,18 @@ public class User {
 		this.address = address;
 	}
 
-	@Override
-	public String toString() {
-		return "User [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
-				+ ", phoneNum=" + phoneNum + ", address=" + address + "]";
+	public String getPassportNum() {
+		return passportNum;
 	}
 
-	
-	
-	
-	
+	public void setPassportNum(String passportNum) {
+		this.passportNum = passportNum;
+	}
+
+	@Override
+	public String toString() {
+		return "User [firstName=" + name + ", lastName=" + surname + ", email=" + jmbg + ", phoneNum=" + phoneNum
+				+ ", address=" + address + " ,passportNum" + passportNum + "]";
+	}
+
 }

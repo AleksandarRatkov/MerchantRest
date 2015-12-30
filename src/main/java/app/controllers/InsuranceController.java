@@ -3,6 +3,7 @@ package app.controllers;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -10,17 +11,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import app.model.Insurance;
 import app.repository.InsuranceRepository;
 
 @RestController
 @RequestMapping("/insurance")
+//@CrossOrigin(origins = "http://localhost:8081")
 public class InsuranceController {
 
 	@Autowired
 	private InsuranceRepository insuranceRepository;
 
+	
 	@RequestMapping(method = RequestMethod.POST)
 	public Map<String, Object> createinsurance(@RequestBody Insurance insurance) {
 		Map<String, Object> response = new LinkedHashMap<String, Object>();

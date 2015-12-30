@@ -1,80 +1,95 @@
 package app.model;
 
 public class VehicleInsurance {
-	//vehicle insurance --"vi"
-	
-		private int viDuration;
-		private int viPackageId; //foreign key
-		
-		//about vehicle
-		private int viTypeId; //foreign key
-		//private String viModel;
-		private int viYearOfProduction;
-		private String viRegistrationNum;
-		private String viVinNum;
-		
 
-		public VehicleInsurance() {
-			super();
-		}
+	private int duration;
+	private String model;
+	private String type;
+	private String owner;
+	private int productionYear;
+	private String registrationNumber;
+	private String vinNumber;
+	private String packageV;
 
-		public VehicleInsurance(int viDuration, int viPackageId, int viTypeId, int viYearOfProduction,
-				String viRegistrationNum, String viVinNum) {
-			super();
-			this.viDuration = viDuration;
-			this.viPackageId = viPackageId;
-			this.viTypeId = viTypeId;
-			this.viYearOfProduction = viYearOfProduction;
-			this.viRegistrationNum = viRegistrationNum;
-			this.viVinNum = viVinNum;
-		}
+	public VehicleInsurance() {
+		super();
+	}
 
-		public int getViDuration() {
-			return viDuration;
-		}
+	public VehicleInsurance(int duration, String model, String type, String owner, int productionYear,
+			String registrationNumber, String vinNumber, String packageV) {
+		super();
+		this.duration = duration;
+		this.model = model;
+		this.type = type;
+		this.owner = owner;
+		this.productionYear = productionYear;
+		this.registrationNumber = registrationNumber;
+		this.vinNumber = vinNumber;
+		this.packageV = packageV;
+	}
 
-		public void setViDuration(int viDuration) {
-			this.viDuration = viDuration;
-		}
+	public int getDuration() {
+		return duration;
+	}
 
-		public int getViPackageId() {
-			return viPackageId;
-		}
+	public void setDuration(int duration) {
+		this.duration = duration;
+	}
 
-		public void setViPackageId(int viPackageId) {
-			this.viPackageId = viPackageId;
-		}
+	public String getModel() {
+		return model;
+	}
 
-		public int getViTypeId() {
-			return viTypeId;
-		}
+	public void setModel(String model) {
+		this.model = model;
+	}
 
-		public void setViTypeId(int viTypeId) {
-			this.viTypeId = viTypeId;
-		}
+	public String getType() {
+		return type;
+	}
 
-		public int getViYearOfProduction() {
-			return viYearOfProduction;
-		}
+	public void setType(String type) {
+		this.type = type;
+	}
 
-		public void setViYearOfProduction(int viYearOfProduction) {
-			this.viYearOfProduction = viYearOfProduction;
-		}
+	public String getOwner() {
+		return owner;
+	}
 
-		public String getViRegistrationNum() {
-			return viRegistrationNum;
-		}
+	public void setOwner(String owner) {
+		this.owner = owner;
+	}
 
-		public void setViRegistrationNum(String viRegistrationNum) {
-			this.viRegistrationNum = viRegistrationNum;
-		}
+	public int getProductionYear() {
+		return productionYear;
+	}
 
-		public String getViVinNum() {
-			return viVinNum;
-		}
+	public void setProductionYear(int productionYear) {
+		this.productionYear = productionYear;
+	}
 
-		public void setViVinNum(String viVinNum) {
-			this.viVinNum = viVinNum;
-		}
-		
+	public String getRegistrationNumber() {
+		return registrationNumber;
+	}
+
+	public void setRegistrationNumber(String registrationNumber) {
+		this.registrationNumber = registrationNumber;
+	}
+
+	public String getVinNumber() {
+		return vinNumber;
+	}
+
+	public void setVinNumber(String vinNumber) {
+		this.vinNumber = vinNumber;
+	}
+
+	public String getPackageV() {
+		return packageV;
+	}
+
+	public void setPackageV(String packageV) {
+		this.packageV = packageV;
+	}
+
 }

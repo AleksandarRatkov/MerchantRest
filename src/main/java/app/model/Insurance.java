@@ -6,53 +6,25 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document
 public class Insurance {
 
-	//travel insurance
+	// travel insurance
 	@Id
 	private String id;
-	private VehicleInsurance vehicleIns;
-	private RealestateInsurance realstateIns;
-	private TravelInsurance travelIns;
-	private double totalPrice;
+	private VehicleInsurance vehicle;
+	private RealestateInsurance realEstate;
+	private TravelInsurance travel;
+	private double amountToPay;
 
 	public Insurance() {
-		super();		
+		super();
 	}
-	
-	
 
 	public Insurance(VehicleInsurance vehicleIns, RealestateInsurance realstateIns, TravelInsurance travelIns,
 			double totalPrice) {
 		super();
-		this.vehicleIns = vehicleIns;
-		this.realstateIns = realstateIns;
-		this.travelIns = travelIns;
-		this.totalPrice = totalPrice;
-	}
-
-
-
-	public VehicleInsurance getVehicleIns() {
-		return vehicleIns;
-	}
-
-	public void setVehicleIns(VehicleInsurance vehicleIns) {
-		this.vehicleIns = vehicleIns;
-	}
-
-	public RealestateInsurance getRealstateIns() {
-		return realstateIns;
-	}
-
-	public void setRealstateIns(RealestateInsurance realstateIns) {
-		this.realstateIns = realstateIns;
-	}
-
-	public TravelInsurance getTravelIns() {
-		return travelIns;
-	}
-
-	public void setTravelIns(TravelInsurance travelIns) {
-		this.travelIns = travelIns;
+		this.vehicle = vehicleIns;
+		this.realEstate = realstateIns;
+		this.travel = travelIns;
+		this.amountToPay = totalPrice;
 	}
 
 	public String getId() {
@@ -62,24 +34,43 @@ public class Insurance {
 	public void setId(String id) {
 		this.id = id;
 	}
-	
 
-	public double getTotalPrice() {
-		return totalPrice;
+	public VehicleInsurance getVehicle() {
+		return vehicle;
 	}
 
-	public void setTotalPrice(double totalPrice) {
-		this.totalPrice = totalPrice;
+	public void setVehicle(VehicleInsurance vehicle) {
+		this.vehicle = vehicle;
 	}
 
+	public RealestateInsurance getRealEstate() {
+		return realEstate;
+	}
 
+	public void setRealEstate(RealestateInsurance realEstate) {
+		this.realEstate = realEstate;
+	}
+
+	public TravelInsurance getTravel() {
+		return travel;
+	}
+
+	public void setTravel(TravelInsurance travel) {
+		this.travel = travel;
+	}
+
+	public double getAmountToPay() {
+		return amountToPay;
+	}
+
+	public void setAmountToPay(double amountToPay) {
+		this.amountToPay = amountToPay;
+	}
 
 	@Override
 	public String toString() {
-		return "Insurance [id=" + id + ", vehicleIns=" + vehicleIns + ", realstateIns=" + realstateIns + ", travelIns="
-				+ travelIns + ", totalPrice=" + totalPrice + "]";
+		return "Insurance [id=" + id + ", vehicleIns=" + vehicle + ", realstateIns=" + realEstate + ", travelIns="
+				+ travel + ", totalPrice=" + amountToPay + "]";
 	}
-	
-	
 
 }

@@ -1,78 +1,38 @@
 package app.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class TravelInsurance {
 
-	private String name;
-	private String surname;
-	private String passportNum;
-	private String address;
-	private String phoneNum;
-	private int duration; //in days
-	private int regionId; //foreign key
-	private int insuredPersonsNum;
-	private int ageGroupId; //foreign key
-	private int sportId; //foreign key
+	private int duration; // in days
+	private String region; // foreign key
+	private int less; // users younger than 18
+	private int between;// users between 18 and 65
+	private int over; // users older than 65
+	private boolean doesSport; // foreign key
+	private String sport;
 	private double amount;
-	
-	
-	
+	private int numOfPersons;// less + between + over
+	private List<User> users = new ArrayList<>();
+
 	public TravelInsurance() {
 		super();
 	}
 
-	public TravelInsurance(String name, String surname, String passportNum, String address, String phoneNum,
-			int duration, int regionId, int insuredPersonsNum, int ageGroupId, int sportId, double amount) {
+	public TravelInsurance(int duration, String region, int less, int between, int over, boolean doesSport, String sport,
+			double amount, int numOfPersons, List<User> users) {
 		super();
-		this.name = name;
-		this.surname = surname;
-		this.passportNum = passportNum;
-		this.address = address;
-		this.phoneNum = phoneNum;
 		this.duration = duration;
-		this.regionId = regionId;
-		this.insuredPersonsNum = insuredPersonsNum;
-		this.ageGroupId = ageGroupId;
-		this.sportId = sportId;
+		this.region = region;
+		this.less = less;
+		this.between = between;
+		this.over = over;
+		this.doesSport = doesSport;
+		this.sport = sport;
 		this.amount = amount;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getSurname() {
-		return surname;
-	}
-
-	public void setSurname(String surname) {
-		this.surname = surname;
-	}
-
-	public String getPassportNum() {
-		return passportNum;
-	}
-
-	public void setPassportNum(String passportNum) {
-		this.passportNum = passportNum;
-	}
-	public String getAddress() {
-		return address;
-	}
-
-	public void setAddress(String address) {
-		this.address = address;
-	}
-
-	public String getPhoneNum() {
-		return phoneNum;
-	}
-
-	public void setPhoneNum(String phoneNum) {
-		this.phoneNum = phoneNum;
+		this.numOfPersons = numOfPersons;
+		this.users = users;
 	}
 
 	public int getDuration() {
@@ -83,37 +43,52 @@ public class TravelInsurance {
 		this.duration = duration;
 	}
 
-	public int getRegionId() {
-		return regionId;
+	public String getRegion() {
+		return region;
 	}
 
-	public void setRegionId(int regionId) {
-		this.regionId = regionId;
+	public void setRegion(String region) {
+		this.region = region;
 	}
 
-	public int getInsuredPersonsNum() {
-		return insuredPersonsNum;
+	public int getLess() {
+		return less;
 	}
 
-	public void setInsuredPersonsNum(int insuredPersonsNum) {
-		this.insuredPersonsNum = insuredPersonsNum;
+	public void setLess(int less) {
+		this.less = less;
 	}
 
-	public int getAgeOfPersons() {
-		return ageGroupId;
+	public int getBetween() {
+		return between;
 	}
 
-	public void setAgeOfPersons(int ageOfPersons) {
-		this.ageGroupId = ageOfPersons;
+	public void setBetween(int between) {
+		this.between = between;
 	}
 
-	
-	public int getSportId() {
-		return sportId;
+	public int getOver() {
+		return over;
 	}
 
-	public void setSportId(int sportId) {
-		this.sportId = sportId;
+	public void setOver(int over) {
+		this.over = over;
+	}
+
+	public boolean isDoesSport() {
+		return doesSport;
+	}
+
+	public void setDoesSport(boolean doesSport) {
+		this.doesSport = doesSport;
+	}
+
+	public String getSport() {
+		return sport;
+	}
+
+	public void setSport(String sport) {
+		this.sport = sport;
 	}
 
 	public double getAmount() {
@@ -122,6 +97,22 @@ public class TravelInsurance {
 
 	public void setAmount(double amount) {
 		this.amount = amount;
+	}
+
+	public int getNumOfPersons() {
+		return numOfPersons;
+	}
+
+	public void setNumOfPersons(int numOfPersons) {
+		this.numOfPersons = numOfPersons;
+	}
+
+	public List<User> getUsers() {
+		return users;
+	}
+
+	public void setUsers(List<User> users) {
+		this.users = users;
 	}
 
 }
