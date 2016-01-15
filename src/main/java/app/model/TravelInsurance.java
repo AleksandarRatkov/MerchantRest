@@ -12,7 +12,7 @@ public class TravelInsurance {
 	private int over; // users older than 65
 	private boolean doesSport; // foreign key
 	private String sport;
-	private double amount;
+	private double insuredAmount;
 	private int numOfPersons;// less + between + over
 	private List<User> users = new ArrayList<>();
 
@@ -20,8 +20,8 @@ public class TravelInsurance {
 		super();
 	}
 
-	public TravelInsurance(int duration, String region, int less, int between, int over, boolean doesSport, String sport,
-			double amount, int numOfPersons, List<User> users) {
+	public TravelInsurance(int duration, String region, int less, int between, int over, boolean doesSport,
+			String sport, double amount, int numOfPersons, List<User> users) {
 		super();
 		this.duration = duration;
 		this.region = region;
@@ -30,7 +30,7 @@ public class TravelInsurance {
 		this.over = over;
 		this.doesSport = doesSport;
 		this.sport = sport;
-		this.amount = amount;
+		this.insuredAmount = amount;
 		this.numOfPersons = numOfPersons;
 		this.users = users;
 	}
@@ -91,12 +91,12 @@ public class TravelInsurance {
 		this.sport = sport;
 	}
 
-	public double getAmount() {
-		return amount;
+	public double getInsuredAmount() {
+		return insuredAmount;
 	}
 
-	public void setAmount(double amount) {
-		this.amount = amount;
+	public void setInsuredAmount(double insuredAmount) {
+		this.insuredAmount = insuredAmount;
 	}
 
 	public int getNumOfPersons() {

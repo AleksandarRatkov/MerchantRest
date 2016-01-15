@@ -4,7 +4,7 @@ public class VehicleInsurance {
 
 	private int duration;
 	private String model;
-	private String type;
+	private String typeVehicle;
 	private String owner;
 	private int productionYear;
 	private String registrationNumber;
@@ -20,7 +20,7 @@ public class VehicleInsurance {
 		super();
 		this.duration = duration;
 		this.model = model;
-		this.type = type;
+		this.typeVehicle = type;
 		this.owner = owner;
 		this.productionYear = productionYear;
 		this.registrationNumber = registrationNumber;
@@ -44,12 +44,12 @@ public class VehicleInsurance {
 		this.model = model;
 	}
 
-	public String getType() {
-		return type;
+	public String getTypeVehicle() {
+		return typeVehicle;
 	}
 
-	public void setType(String type) {
-		this.type = type;
+	public void setTypeVehicle(String typeVehicle) {
+		this.typeVehicle = typeVehicle;
 	}
 
 	public String getOwner() {

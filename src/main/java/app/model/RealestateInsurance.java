@@ -4,7 +4,7 @@ public class RealestateInsurance {
 
 	// real estate insurance -- "re"
 	private int duration;
-	private double size;
+	private double sizeRE;
 	private double age;
 	private double estimatedValue;
 	private String owner; // name + surname
@@ -18,7 +18,7 @@ public class RealestateInsurance {
 			String packageRE) {
 		super();
 		this.duration = duration;
-		this.size = size;
+		this.sizeRE = size;
 		this.age = age;
 		this.estimatedValue = estimatedValue;
 		this.owner = owner;
@@ -33,12 +33,12 @@ public class RealestateInsurance {
 		this.duration = duration;
 	}
 
-	public double getSize() {
-		return size;
+	public double getSizeRE() {
+		return sizeRE;
 	}
 
-	public void setSize(double size) {
-		this.size = size;
+	public void setSizeRE(double sizeRE) {
+		this.sizeRE = sizeRE;
 	}
 
 	public double getAge() {
